@@ -17,9 +17,10 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import gprpy.gprpy as gp
 import numpy as np
-import gprpy.toolbox.splash as splash
+#import gprpy.toolbox.splash as splash
+import gprpy.toolbox.splash_simple as splash
 import os
-import Pmw
+# import Pmw
 import scipy.interpolate as interp
 
 
@@ -55,7 +56,7 @@ class GPRPyApp:
         master.title("GPRPy")
         
         # Variables specific to GUI
-        self.balloon = Pmw.Balloon()
+        # self.balloon = Pmw.Balloon()
         self.picking = False       
         self.delimiter = None
         self.grid = False

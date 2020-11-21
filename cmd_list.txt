@@ -1,0 +1,27 @@
+python -m pip install --upgrade pip
+python -m pip install virtualenv==12.0.0
+mkdir GPRpy_env
+python -m virtualenv GPRpy_env -p python3
+
+python -m venv GPRpy_env
+cmd /c GPRpy_env\Scripts\activate.bat
+python -m pip install pip==20.0.2
+
+python -m cli.py
+
+
+python -m pip install pip==20.0.2
+python -m pip install PyInstaller==3.6
+python -m pip install numpy==1.18.2
+python -m pip install scipy==1.4.1
+
+python -m pip install matplotlib==3.2.1
+python -m pip install tqdm
+python -m pip install pyevtk
+
+python -m pip install pickle
+
+python -m pip install copy
+python -m pip install tk
+python -m pip install zlib
+python -m pip install pillow==4.0.0
