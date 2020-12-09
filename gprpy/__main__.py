@@ -3,8 +3,9 @@ import tkinter as tk
 
 #from gui_test.gui import MainApplication
 #from gprpy.gprpyGUI import GPRPyApp
-from gprpy.gprpyGUI_simple import GPRPyApp as GPRPyApp_simple
+from gprpy.gprpyGUI_m import GPRPyApp as GPRPyApp_m
 #from gprpy.gprpyCWGUI import GPRPyCWApp
+from gprpy.gprpyCWGUI_m import GPRPyCWApp as GPRPyCWApp_m
 
 def main(args=None):
 
@@ -13,14 +14,9 @@ def main(args=None):
 	# else:
 	# 	mode = sys.argv[1][0]
 
-	mode='p_simple'
+	mode = 'c_m'
 
-	if mode == 'test':	
-		root = tk.Tk()
-		app = MainApplication(root)
-		root.mainloop()
-
-	elif mode == 'p_simple':
+	if mode == 'p_m':
 		rightcol=9
 		figrowsp=19+1
     
@@ -31,7 +27,22 @@ def main(args=None):
 		for row in range(figrowsp):    
 			root.rowconfigure(row, weight=1)
             
-		app = GPRPyApp_simple(root)
+		app = GPRPyApp_m(root)
+
+		root.mainloop()
+
+	elif mode == 'c_m' or mode == 'w_m':
+		rightcol=10
+		figrowsp=15+1
+    
+		root = tk.Tk()
+
+		for col in range(rightcol):
+			root.columnconfigure(col, weight=1)
+		for row in range(figrowsp):    
+			root.rowconfigure(row, weight=1)
+
+		app = GPRPyCWApp_m(root)
 
 		root.mainloop()
 
